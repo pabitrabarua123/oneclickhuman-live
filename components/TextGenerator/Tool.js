@@ -627,7 +627,9 @@ export const Tool = ({userData}) => {
   }
 
   const [ai_check, setAiCheck] = useState(null);
+  const [ai_check_request, setAiCheckRequest] = useState(false);
   const checkAI = () => {
+    setAiCheckRequest(true);
     fetch('https://oneclickhuman.com/api_request/check_ai_presence', {
       mode:'cors', 
       method: 'POST',
@@ -642,6 +644,7 @@ export const Tool = ({userData}) => {
       .then((json) => {
          console.log(json);  
          setAiCheck(json.res);
+         setAiCheckRequest(false);
       })
   }
   
@@ -772,8 +775,22 @@ export const Tool = ({userData}) => {
                  : ''
                }
                 <span className="tooltip" onClick={copyContent}><i className="feather-copy"></i><span className="tooltiptext">Copy</span></span>
-                <button onClick={() => checkAI()} className="btn-default btn-small round">Check AI</button>
-                <span><b>AI Percentage:</b> {ai_check}</span>
+                <button 
+                  onClick={() => checkAI()} 
+                  className="btn-default btn-small round"
+                  style={{
+                    height: "30px",
+                    fontSize: "12px",
+                    lineHeight: "20px",
+                    padding: "0 15px",
+                    marginRight: "10px"
+                  }}
+                  disabled={ai_check_request}>
+                    {ai_check_request ? 'Checking...' : 'Check AI'}
+                 </button>
+                 { request === 2 &&
+                   <span>AI Percentage: {ai_check}</span>
+                 }
               </div>
              </div>
              </>
