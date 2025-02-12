@@ -753,6 +753,7 @@ export const Tool = ({userData}) => {
                  : ''
                }
                 <span className="tooltip" onClick={copyContent}><i className="feather-copy"></i><span className="tooltiptext">Copy</span></span>
+                <button>Check AI</button>
               </div>
              </div>
              </>
