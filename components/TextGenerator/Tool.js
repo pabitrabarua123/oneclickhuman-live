@@ -199,7 +199,7 @@ export const Tool = ({userData}) => {
   
       //setRequest(2);
       //return;
-  
+    setAiCheck(null); 
     let outputRes = '';
     let quota_used = 0;
     setTextBottomRight(false);
@@ -788,7 +788,7 @@ export const Tool = ({userData}) => {
                   disabled={ai_check_request}>
                     {ai_check_request ? 'Checking...' : 'Check AI'}
                  </button>
-                 { request === 2 &&
+                 { request_process === 0 &&
                    <span>AI Percentage: {ai_check}</span>
                  }
               </div>
