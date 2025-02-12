@@ -626,6 +626,7 @@ export const Tool = ({userData}) => {
     selectText('result');
   }
 
+  const [ai_check, setAiCheck] = useState(null);
   const checkAI = () => {
     fetch('https://oneclickhuman.com/api_request/check_ai_presence', {
       mode:'cors', 
@@ -639,7 +640,8 @@ export const Tool = ({userData}) => {
       }
     }).then(res => res.json())
       .then((json) => {
-         console.log(json)  
+         console.log(json);  
+         setAiCheck(json.res);
       })
   }
   
@@ -770,7 +772,8 @@ export const Tool = ({userData}) => {
                  : ''
                }
                 <span className="tooltip" onClick={copyContent}><i className="feather-copy"></i><span className="tooltiptext">Copy</span></span>
-                <button onClick={() => checkAI()}>Check AI</button>
+                <button onClick={() => checkAI()} className="btn-default btn-small round">Check AI</button>
+                <span><b>AI Percentage:</b> {ai_check}</span>
               </div>
              </div>
              </>
