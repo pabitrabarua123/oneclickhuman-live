@@ -788,7 +788,7 @@ export const Tool = ({userData}) => {
                   disabled={ai_check_request}>
                     {ai_check_request ? 'Checking...' : 'Check AI'}
                  </button>
-                 { request_process === 0 &&
+                 { request_process === 0 && ai_check !== null &&
                    <span>AI Percentage: {ai_check}</span>
                  }
               </div>
