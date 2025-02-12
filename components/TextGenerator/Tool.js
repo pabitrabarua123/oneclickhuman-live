@@ -625,6 +625,23 @@ export const Tool = ({userData}) => {
   const copyContent = () =>{
     selectText('result');
   }
+
+  const checkAI = () => {
+    fetch('https://oneclickhuman.com/api_request/check_ai_presence', {
+      mode:'cors', 
+      method: 'POST',
+        body: JSON.stringify({
+        'user' : userData.user_id,
+        'content' : paraphrasedText
+      }),
+      headers: {
+       'Content-type': 'application/json; charset=UTF-8',
+      }
+    }).then(res => res.json())
+      .then((json) => {
+         console.log(json)  
+      })
+  }
   
 
    return(
@@ -753,7 +770,7 @@ export const Tool = ({userData}) => {
                  : ''
                }
                 <span className="tooltip" onClick={copyContent}><i className="feather-copy"></i><span className="tooltiptext">Copy</span></span>
-                <button>Check AI</button>
+                <button onClick={() => checkAI()}>Check AI</button>
               </div>
              </div>
              </>
