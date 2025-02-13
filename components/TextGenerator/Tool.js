@@ -631,6 +631,7 @@ export const Tool = ({userData}) => {
   const checkAI = () => {
     setAiCheckRequest(true);
     const content = document.getElementById('result').innerHTML;
+    setParaphrasedText(content);
     fetch('https://oneclickhuman.com/api_request/check_ai_presence', {
       mode:'cors', 
       method: 'POST',
