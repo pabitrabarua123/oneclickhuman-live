@@ -779,9 +779,9 @@ export const Tool = ({userData}) => {
                 <span className="tooltip" onClick={copyContent}><i className="feather-copy"></i><span className="tooltiptext">Copy</span></span>
                 <button 
                   onClick={() => checkAI()} 
-                  className="btn-default btn-small round"
+                  className="btn-default btn-border"
                   style={{
-                    height: "30px",
+                    height: "36px",
                     fontSize: "12px",
                     lineHeight: "20px",
                     padding: "0 15px",
