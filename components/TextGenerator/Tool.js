@@ -791,7 +791,7 @@ export const Tool = ({userData}) => {
                     {ai_check_request ? 'Checking...' : 'Check for AI'}
                  </button>
                  { request_process === 0 && ai_check !== null &&
-                   <span style={{ lineHeight: "15px", marginTop: "9px" }}>AI Percentage: {ai_check}</span>
+                   <span id="ai-percentage" style={{ lineHeight: "15px", marginTop: "9px" }}>AI Percentage: {ai_check}</span>
                  }
               </div>
              </div>
