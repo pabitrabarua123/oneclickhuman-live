@@ -781,14 +781,14 @@ export const Tool = ({userData}) => {
                   onClick={() => checkAI()} 
                   className="btn-default btn-border"
                   style={{
-                    height: "36px",
+                    height: "34px",
                     fontSize: "12px",
                     lineHeight: "20px",
                     padding: "0 15px",
                     marginRight: "10px"
                   }}
                   disabled={ai_check_request}>
-                    {ai_check_request ? 'Checking...' : 'Check AI'}
+                    {ai_check_request ? 'Checking...' : 'Check for AI'}
                  </button>
                  { request_process === 0 && ai_check !== null &&
                    <span>AI Percentage: {ai_check}</span>
