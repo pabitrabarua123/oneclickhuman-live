@@ -100,7 +100,7 @@ const Service = () => {
                 <br/><br/>
                 {/* <Image src={Humanize} className="humanize_iamge"/> */}
 
-              <div id="iframe-container">
+              {/* <div id="iframe-container">
                 <iframe
                   src="https://embed.app.guidde.com/playbooks/wtquBF4c6f1uGQE7yes6u5" 
                   title="How to use the humanizing tool on our site oneclickhuman.com and get refined content that is detectiion proof." 
@@ -110,7 +110,7 @@ const Service = () => {
                   allow="clipboard-write" 
                   sandbox="allow-popups allow-popups-to-escape-sandbox allow-scripts allow-forms allow-same-origin allow-presentation">
                 </iframe>
-              </div>
+              </div> */}
 
               </div>
             </div>

@@ -2302,7 +2302,9 @@ div#popup p {
     width: 50%;
 }
 
-
+#ai-percentage {
+    font-size: 12px;
+}
 @media only screen and (max-width: 991px) {
     div#left-column, div#right-column {
         padding-right: 1.5rem;
@@ -2319,9 +2321,6 @@ div#popup p {
         position: static;
         height: 52px;
         width: 100%;
-    }
-    #ai-percentage {
-        font-size: 13px;
     }
 }
 
